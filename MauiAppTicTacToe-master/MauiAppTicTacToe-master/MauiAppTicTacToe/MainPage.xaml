@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppTicTacToe.MainPage" >
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+            <GradientStop Color="Purple" Offset="0.2" />
+            <GradientStop Color="DarkCyan" Offset="1.1" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="FontSize" Value="85" />
+            <Setter Property="BorderWidth" Value="4" />
+            <Setter Property="BorderColor" Value="White" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid ColumnDefinitions="*, *, *" RowDefinitions="*, *, *, *, *" VerticalOptions="FillAndExpand" 
+          Padding="10">
+
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+               FontSize="60" HorizontalTextAlignment="Center"
+               FontFamily="Tahoma" FontAttributes="Bold" TextColor="White"
+               Text="TIC TAC TOE"/>
+
+        <Button x:Name="btn01" Grid.Row="1" Grid.Column="0" Text="" Clicked="Button_Clicked"/>
+        <Button x:Name="btn02" Grid.Row="2" Grid.Column="0" Text="" Clicked="Button_Clicked"/>
+        <Button x:Name="btn03" Grid.Row="3" Grid.Column="0" Text="" Clicked="Button_Clicked"/>
+
+        <Button x:Name="btn11" Grid.Row="1" Grid.Column="1" Text="" Clicked="Button_Clicked"/>
+        <Button x:Name="btn12" Grid.Row="2" Grid.Column="1" Text="" Clicked="Button_Clicked"/>
+        <Button x:Name="btn13" Grid.Row="3" Grid.Column="1" Text="" Clicked="Button_Clicked"/>
+
+        <Button x:Name="btn21" Grid.Row="1" Grid.Column="2" Text="" Clicked="Button_Clicked"/>
+        <Button x:Name="btn22" Grid.Row="2" Grid.Column="2" Text="" Clicked="Button_Clicked"/>
+        <Button x:Name="btn23" Grid.Row="3" Grid.Column="2" Text="" Clicked="Button_Clicked"/>
+
+        <Button x:Name="resetGameButton" Grid.Row="4" Grid.Column="1" Clicked="resetGameButton_Clicked"
+                Text="Restart Game!" FontSize="20"/>
+    </Grid>
+</ContentPage>
