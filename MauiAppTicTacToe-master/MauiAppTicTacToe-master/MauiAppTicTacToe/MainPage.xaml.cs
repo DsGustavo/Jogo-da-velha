@@ -108,11 +108,41 @@ namespace MauiAppTicTacToe
                     DisplayAlert("Finish game!", "Draw game!", "Play Again");
                 }
             }
+            
+            if(btn01.Text == "X" && btn11.Text == "X" && btn12.Text == "X")
+            {
+                DisplayAlert("Parabéns!", "O X ganhou!", "OK");
+            }        
+        
+        
         }
+
+        private void limpar()
+        {
+            btn01.Text = "";
+            btn01.IsEnabled = true;
+            btn02.Text = "";
+            btn02.IsEnabled = true;
+            btn03.Text = "";
+            btn03.IsEnabled = true;
+            btn11.Text = "";
+            btn11.IsEnabled = true;
+            btn12.Text = "";
+            btn12.IsEnabled = true;
+            btn13.Text = "";
+            btn13.IsEnabled = true;
+            btn21.Text = "";
+            btn21.IsEnabled = true;
+            btn22.Text = "";
+            btn22.IsEnabled = true;
+            btn23.Text = "";
+            btn23.IsEnabled = true;
+        }
+
 
         private void resetGameButton_Clicked(object sender, EventArgs e)
         {
-            // Reset game
+            limpar();
         }
     }
 }
